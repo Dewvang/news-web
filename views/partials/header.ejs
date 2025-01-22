@@ -1,0 +1,64 @@
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <a href="/"><h1>Khaosueak <span>Online</span></h1></a>
+            </div>
+            <ul class="nav-list">
+                <li><a href="/">หน้าแรก</a></li>
+                <li class="dropdown">
+                    <a href="#">หมวดหมู่</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/category/business">ธุรกิจ</a></li>
+                        <li><a href="/category/entertainment">บันเทิง</a></li>
+                        <li><a href="/category/general">ทั่วไป</a></li>
+                        <li><a href="/category/health">สุขภาพ</a></li>
+                        <li><a href="/category/science">วิทยาศาตร์</a></li>
+                        <li><a href="/category/sports">กีฬา</a></li>
+                        <li><a href="/category/technology">เทคโนโลยี</a></li>
+                    </ul>
+                </li>
+                <li class="search">
+                    <form action="/search" method="GET">
+                        <input type="text" name="query" placeholder="ค้นหา..." onkeydown="if(event.key === 'Enter'){this.form.submit();}">
+                    </form>
+                </li>
+                
+                
+            </ul>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+        <hr class="hr-1">
+    </div>
+</header>
+
+<!-- เมนูที่จะแสดงออกมาจากทางขวา -->
+<div id="side-menu" class="side-menu">
+    <ul>
+        <li><a href="/"><h2>หน้าแรก</h2></a></li>
+        <li class="search">
+            <form action="/search" method="GET">
+                <input type="text" name="query" placeholder="ค้นหา..." onkeydown="if(event.key === 'Enter'){this.form.submit();}">
+            </form>
+        </li>
+        <li><a href="/category/business">ธุรกิจ</a></li>
+        <li><a href="/category/entertainment">บันเทิง</a></li>
+        <li><a href="/category/general">ทั่วไป</a></li>
+        <li><a href="/category/health">สุขภาพ</a></li>
+        <li><a href="/category/science">วิทยาศาสตร์</a></li>
+        <li><a href="/category/sports">กีฬา</a></li>
+        <li><a href="/category/technology">เทคโนโลยี</a></li>
+        
+    </ul>
+</div>
+
+<!-- คลิกพื้นที่ว่างจะทำให้เมนูปิด -->
+<div id="overlay" class="overlay"></div>
+
+
+

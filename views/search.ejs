@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <!-- รวม Header -->
+    <%- include('partials/header') %>
+
+        <div class="container">
+            <h1 class="news-head">ผลการค้นหาสำหรับ "<%= searchQuery %>"</h1>
+            <div class="news-album">
+                <% if (articles.length> 0) { %>
+                    <% articles.forEach(article=> { %>
+                        <div class="news-card">
+                            <% if (article.urlToImage) { %>
+                                <img src="<%= article.urlToImage %>" alt="News Image" class="news-image">
+                                <% } else { %>
+                                    <div class="no-image">No image available</div>
+                                    <% } %>
+                                        <div class="news-content">
+                                            <h2 class="news-title">
+                                                <%= article.title %>
+                                            </h2>
+                                            <p class="news-description">
+                                                <%= article.description %>
+                                            </p>
+                                            <a href="<%= article.url %>" target="_blank" class="news-link">Read more</a>
+                                        </div>
+                        </div>
+                        <% }); %>
+                            <% } else { %>
+                                <p>No news available for "<%= searchQuery %>" at the moment.</p>
+                                <% } %>
+            </div>
+        </div>
+
+
+        <!-- รวม Footer -->
+        <%- include('partials/footer') %>
+            <script src="/js/script.js"></script>
+</body>
+
+</html>
