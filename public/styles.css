@@ -295,6 +295,7 @@ body {
     /* รูปภาพที่เล็กกว่าจะไม่ย่อ แต่ขยายเต็มความสูง */
     width: 100%;
     /* ให้ภาพขยายเต็มความกว้างของ carousel */
+    object-fit: cover;
 }
 
 .carousel-caption-container {
@@ -449,6 +450,13 @@ footer {
         p {
             display: none;
         }
+    }
+
+    .news-album {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        margin: 0 auto;
     }
 }
 
